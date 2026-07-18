@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cirque Lake — A Field Guide to the Callaghan Valley&#8217;s Hanging Lake, BC</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A field guide to Cirque Lake, the hanging granite bowl above Callaghan Lake in the Sea to Sky corridor. Paddle two kilometres, climb beside the waterfall, arrive somewhere most people never see. Route notes, wind timing, canoe rentals — one of the corridor&#8217;s great backcountry water sports days.">
+<link rel="canonical" href="https://cirquelake.com/">
+<meta property="og:title" content="Cirque Lake — A Field Guide to the Callaghan Valley&#8217;s Hanging Lake, BC">
+<meta property="og:description" content="The paddle-then-hike secret above Callaghan Lake. You cannot walk there. That is the whole point.">
+<meta property="og:url" content="https://cirquelake.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f2f1ec;         /* cool paper — granite dust */
+    --paper-raise: #f7f6f2;
+    --paper-sink: #e9e8e1;
+    --ink: #21242a;           /* wet-granite ink */
+    --ink-soft: #3b3f46;
+    --ink-mute: #757a80;
+    --rule: #d8d7cf;
+    --rule-strong: #bfbeb4;
+    --granite: #5a616b;
+    --ice: #4d8ba3;           /* ice-blue accent */
+    --ice-deep: #33657c;
+    --fir: #2e4436;           /* subalpine fir */
+    --snowline: #e3ecef;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17px; line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--ice-deep); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; }
+  .tx { border-bottom: 1px solid var(--rule-strong); transition: border-color .18s, color .18s; }
+  .tx:hover { border-bottom-color: var(--ice-deep); color: var(--ice-deep); }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 380;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 { font-size: clamp(2.7rem, 6.5vw, 5rem); }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+  h3 { font-size: 1.22rem; font-weight: 450; line-height: 1.3; }
+  p { margin: 0 0 1.05rem; color: var(--ink-soft); font-size: 1.03rem; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+  .prose { max-width: 700px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    font-size: 0.7rem; letter-spacing: 0.26em; text-transform: uppercase;
+    font-weight: 600; color: var(--fir);
+  }
+  .eyebrow::after { content: ""; width: 3.2rem; height: 1px; background: var(--rule-strong); }
+
+  /* ---------- NAV ---------- */
+  header.masthead {
+    position: sticky; top: 0; z-index: 60;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  header.masthead .bar {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 0.85rem 1.5rem;
+  }
+  .wordmark { font-family: "Fraunces", serif; font-size: 1.02rem; font-weight: 450; letter-spacing: -0.01em; }
+  .wordmark small {
+    display: block; font-family: "Inter", sans-serif;
+    font-size: 0.58rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--ink-mute); margin-top: 0.18rem;
+  }
+  header.masthead nav { display: flex; gap: 1.6rem; }
+  header.masthead nav a {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  header.masthead nav a:hover { color: var(--ice-deep); }
+  @media (max-width: 780px) { header.masthead nav { display: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: 4.5rem 0 0; text-align: center; }
+  .hero .issue {
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute); margin-bottom: 1.4rem;
+  }
+  .hero .issue b { color: var(--fir); font-weight: 600; }
+  .hero h1 em { font-style: italic; font-weight: 340; color: var(--granite); }
+  .hero .deck {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 340;
+    font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.5;
+    color: var(--ink-soft); max-width: 620px; margin: 1.4rem auto 0;
+    letter-spacing: -0.005em;
+  }
+  .hero-art { margin: 3rem auto 0; max-width: 1120px; padding: 0 1.5rem; }
+  .hero-art svg { display: block; width: 100%; height: auto; border-radius: 8px; }
+  .hero-art figcaption {
+    font-size: 0.76rem; color: var(--ink-mute); margin-top: 0.7rem;
+    font-style: italic; font-family: "Fraunces", serif; font-weight: 340; font-size: 0.9rem;
+  }
+
+  /* ---------- SURVEY RIBBON ---------- */
+  .survey {
+    margin: 3.2rem 0 0;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    background: var(--paper-raise);
+  }
+  .survey .cells {
+    max-width: 1120px; margin: 0 auto; padding: 0 1.5rem;
+    display: grid; grid-template-columns: repeat(6, auto);
+    justify-content: space-between; gap: 0 1.6rem;
+  }
+  @media (max-width: 900px) { .survey .cells { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 520px) { .survey .cells { grid-template-columns: repeat(2, 1fr); } }
+  .survey .cell { padding: 1.05rem 0; }
+  .survey .k {
+    font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute); display: block; margin-bottom: 0.2rem;
+  }
+  .survey .v { font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 450; color: var(--ink); white-space: nowrap; }
+  .survey .v span { color: var(--ink-mute); font-size: 0.85rem; }
+
+  /* ---------- OPENING ESSAY ---------- */
+  section.opening { padding: 6.5rem 0 5.5rem; }
+  section.opening .lede { margin-top: 2.2rem; }
+  .dropcap::first-letter {
+    font-family: "Fraunces", serif; font-weight: 380;
+    float: left; font-size: 4.5rem; line-height: 0.82;
+    padding: 0.06em 0.12em 0 0; color: var(--ice-deep);
+  }
+
+  .pullquote {
+    margin: 4.5rem auto; max-width: 640px; padding: 2.2rem 1.5rem;
+    border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong);
+    text-align: center;
+  }
+  .pullquote p {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 340;
+    font-size: clamp(1.35rem, 2.6vw, 1.8rem); line-height: 1.4;
+    color: var(--ink); margin: 0; letter-spacing: -0.01em;
+  }
+  .pullquote cite { display: block; margin-top: 0.9rem; font-family: "Inter", sans-serif; font-style: normal; font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); }
+
+  /* ---------- TWO ACTS ---------- */
+  section.act { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
+  section.act.alt { background: var(--paper-sink); }
+  .act-grid {
+    max-width: 1120px; margin: 0 auto; padding: 0 1.5rem;
+    display: grid; grid-template-columns: 200px 1fr; gap: 3.5rem;
+    align-items: start;
+  }
+  @media (max-width: 860px) { .act-grid { grid-template-columns: 1fr; gap: 1.6rem; } }
+  .act-side { position: sticky; top: 5.2rem; }
+  @media (max-width: 860px) { .act-side { position: static; } }
+  .act-side .numeral {
+    font-family: "Fraunces", serif; font-weight: 300; font-style: italic;
+    font-size: 5.6rem; line-height: 0.9; color: var(--ice);
+    letter-spacing: -0.03em;
+  }
+  section.act.alt .act-side .numeral { color: var(--granite); }
+  .act-side .actname {
+    margin-top: 0.7rem; font-size: 0.68rem; letter-spacing: 0.26em;
+    text-transform: uppercase; font-weight: 600; color: var(--ink-mute);
+  }
+  .act-side .actstats { margin-top: 1.6rem; border-top: 1px solid var(--rule-strong); }
+  .act-side .actstats div { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); font-size: 0.85rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 1rem; }
+  .act-side .actstats b { font-weight: 600; color: var(--ink); font-family: "Fraunces", serif; font-weight: 450; }
+  .act-main h2 { margin-bottom: 1.4rem; max-width: 22ch; }
+  .act-main h2 em { font-style: italic; font-weight: 340; }
+
+  .aside-note {
+    margin: 1.8rem 0; padding: 1.2rem 1.4rem;
+    background: var(--snowline);
+    border-left: 2px solid var(--ice-deep);
+    border-radius: 0 4px 4px 0;
+  }
+  .aside-note .tag {
+    display: block; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; color: var(--ice-deep); margin-bottom: 0.4rem;
+  }
+  .aside-note p { margin: 0; font-size: 0.95rem; color: var(--ink); }
+  .aside-note.bear { background: #efe9dd; border-left-color: var(--fir); }
+  .aside-note.bear .tag { color: var(--fir); }
+
+  /* ---------- REWARD ---------- */
+  section.reward { padding: 6rem 0; border-top: 1px solid var(--rule); }
+  .reward-head { text-align: center; max-width: 680px; margin: 0 auto 3.2rem; padding: 0 1.5rem; }
+  .reward-head h2 { margin-top: 1.1rem; }
+  .reward-grid {
+    max-width: 1120px; margin: 0 auto; padding: 0 1.5rem;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) { .reward-grid { grid-template-columns: 1fr; } }
+  .reward-cell { background: var(--paper); padding: 1.9rem 1.8rem; }
+  .reward-cell .n { font-family: "Fraunces", serif; font-style: italic; font-weight: 340; color: var(--ice-deep); font-size: 0.95rem; display: block; margin-bottom: 0.55rem; }
+  .reward-cell h3 { margin-bottom: 0.5rem; }
+  .reward-cell p { margin: 0; font-size: 0.95rem; }
+
+  /* ---------- OUTFIT / FUNNEL ---------- */
+  .kitline {
+    margin: 2rem 0 0; padding: 1.5rem 1.6rem;
+    border: 1px solid var(--rule-strong); border-radius: 6px;
+    background: var(--paper-raise);
+  }
+  .kitline .tag { display: block; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); margin-bottom: 0.5rem; }
+  .kitline p { margin: 0; font-size: 0.97rem; }
+
+  /* ---------- SEASON TABLE ---------- */
+  section.almanac { padding: 5.5rem 0; border-top: 1px solid var(--rule); background: var(--paper-sink); }
+  table.season {
+    width: 100%; border-collapse: collapse; margin-top: 2.2rem;
+    font-size: 0.95rem;
+  }
+  table.season th {
+    text-align: left; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute); padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  table.season td { padding: 0.95rem 1.2rem 0.95rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--ink-soft); }
+  table.season td.m { font-family: "Fraunces", serif; font-style: italic; font-weight: 380; color: var(--ink); white-space: nowrap; font-size: 1.02rem; }
+  table.season td.verdict { font-weight: 600; color: var(--ink); font-family: "Inter", sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+  table.season td.verdict.go { color: var(--fir); }
+  table.season td.verdict.no { color: var(--ink-mute); }
+  @media (max-width: 640px) {
+    table.season, table.season tbody, table.season tr, table.season td { display: block; }
+    table.season thead { display: none; }
+    table.season tr { border-bottom: 1px solid var(--rule); padding: 0.9rem 0; }
+    table.season td { border: none; padding: 0.15rem 0; }
+  }
+
+  /* ---------- HONEST NOTE ---------- */
+  section.honest { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
+  section.honest em { color: var(--ink); }
+
+  /* ---------- FAQ ---------- */
+  section.qa { padding: 5.5rem 0 6rem; border-top: 1px solid var(--rule); }
+  .qa-list { margin-top: 2.4rem; border-top: 1px solid var(--rule-strong); }
+  details.q { border-bottom: 1px solid var(--rule); }
+  details.q > summary {
+    list-style: none; cursor: pointer; padding: 1.35rem 0;
+    display: flex; gap: 1.1rem; align-items: baseline;
+    font-family: "Fraunces", serif; font-weight: 420; font-size: 1.16rem;
+    letter-spacing: -0.01em; line-height: 1.35; color: var(--ink);
+  }
+  details.q > summary::-webkit-details-marker { display: none; }
+  details.q > summary::before {
+    content: "→";
+    font-family: "Inter", sans-serif; font-weight: 400; color: var(--ice-deep);
+    flex: 0 0 auto; transition: transform .2s; font-size: 1rem;
+  }
+  details.q[open] > summary::before { transform: rotate(90deg); }
+  details.q > summary:hover { color: var(--ice-deep); }
+  details.q .ans { padding: 0 0 1.5rem 2.1rem; }
+  @media (max-width: 560px) { details.q .ans { padding-left: 0; } }
+  details.q .ans p { font-size: 0.99rem; margin-bottom: 0.85rem; }
+  details.q .ans p:last-child { margin-bottom: 0; }
+
+  /* ---------- FOOTER ---------- */
+  footer.colophon { border-top: 1px solid var(--rule-strong); background: var(--paper-raise); padding: 3.2rem 0 2.2rem; }
+  .col-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2.4rem; margin-bottom: 2.4rem; }
+  @media (max-width: 700px) { .col-grid { grid-template-columns: 1fr; gap: 1.8rem; } }
+  .col-grid h4 { font-size: 0.64rem; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); margin: 0 0 0.8rem; }
+  .col-grid p { font-size: 0.9rem; margin: 0; }
+  .col-grid ul { list-style: none; margin: 0; padding: 0; }
+  .col-grid li { margin-bottom: 0.45rem; font-size: 0.9rem; }
+  .col-grid li a { color: var(--ink-soft); border-bottom: 1px solid transparent; }
+  .col-grid li a:hover { color: var(--ice-deep); border-bottom-color: var(--ice-deep); }
+  .col-bottom {
+    border-top: 1px solid var(--rule); padding-top: 1.3rem;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
+    font-size: 0.76rem; color: var(--ink-mute);
+  }
+  .col-bottom em { font-family: "Fraunces", serif; font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- ===================== MASTHEAD ===================== -->
+<header class="masthead">
+  <div class="bar">
+    <a class="wordmark" href="https://seatoskytrails.com/">Sea to Sky Trails
+      <small>Field guides to the corridor</small>
+    </a>
+    <nav>
+      <a href="#act-one">Act I &middot; The Paddle</a>
+      <a href="#act-two">Act II &middot; The Climb</a>
+      <a href="#reward">The Reward</a>
+      <a href="#almanac">Almanac</a>
+      <a href="#qa">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero">
+  <div class="issue">Sea to Sky Trails &middot; <b>Vol.&nbsp;II, No.&nbsp;10</b> &middot; Callaghan Valley</div>
+  <h1>Cirque <em>Lake</em></h1>
+  <p class="deck">A lake with no trailhead, hanging in a granite bowl above Callaghan Lake. You paddle to reach the climb, and you climb to reach the water. An expedition in two acts.</p>
+
+  <figure class="hero-art">
+    <!-- Hanging cirque scene: granite amphitheatre, waterfall thread, big lake below, tiny canoe -->
+    <svg viewBox="0 0 1200 560" role="img" aria-label="Illustration of Cirque Lake hanging in a granite bowl, its outflow waterfall threading down to Callaghan Lake, where a tiny canoe crosses toward the far shore.">
+      <defs>
+        <linearGradient id="cq-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#dfe9ec"/>
+          <stop offset="0.55" stop-color="#e9eee9"/>
+          <stop offset="1" stop-color="#f0efe7"/>
+        </linearGradient>
+        <linearGradient id="cq-bowl" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#aeb6bd"/>
+          <stop offset="1" stop-color="#8b939b"/>
+        </linearGradient>
+        <linearGradient id="cq-low" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#6e7681"/>
+          <stop offset="1" stop-color="#596069"/>
+        </linearGradient>
+        <clipPath id="cq-frame"><rect x="0" y="0" width="1200" height="560" rx="10"/></clipPath>
+      </defs>
+      <g clip-path="url(#cq-frame)">
+        <rect width="1200" height="560" fill="url(#cq-sky)"/>
+
+        <!-- far ridge -->
+        <path d="M0 208 L120 168 L235 190 L330 128 L455 96 L560 142 L700 88 L830 130 L960 100 L1080 150 L1200 122 L1200 560 L0 560 Z" fill="#c6ccd0"/>
+        <!-- snow patches on far ridge -->
+        <path d="M448 100 L470 96 L492 112 L466 118 Z" fill="#f2f5f5"/>
+        <path d="M692 92 L712 88 L734 106 L706 112 Z" fill="#f2f5f5"/>
+        <path d="M952 104 L972 100 L992 116 L966 121 Z" fill="#f2f5f5"/>
+
+        <!-- amphitheatre bowl walls -->
+        <path d="M0 300 L90 226 L200 262 L305 180 L420 152 L520 214 L620 160 L640 232 L640 560 L0 560 Z" fill="url(#cq-bowl)"/>
+        <path d="M560 232 L660 148 L790 176 L900 138 L1010 196 L1120 168 L1200 214 L1200 560 L560 560 Z" fill="url(#cq-bowl)"/>
+        <!-- wall shading strokes -->
+        <g fill="none" stroke="#767e87" stroke-width="1.6" stroke-linecap="round" opacity="0.6">
+          <path d="M305 186 L282 268"/>
+          <path d="M420 158 L406 244"/>
+          <path d="M660 156 L648 240"/>
+          <path d="M900 146 L886 226"/>
+          <path d="M1010 202 L998 268"/>
+          <path d="M200 266 L188 320"/>
+        </g>
+        <!-- snow in the bowl couloirs -->
+        <path d="M300 182 L316 178 L330 216 L306 224 Z" fill="#eef2f3"/>
+        <path d="M896 140 L914 136 L926 170 L902 176 Z" fill="#eef2f3"/>
+
+        <!-- the hanging lake: Cirque Lake itself, tucked on the bench -->
+        <path d="M470 268 C 520 252, 660 250, 726 266 C 762 276, 758 292, 716 300 C 640 313, 520 312, 478 296 C 452 286, 448 276, 470 268 Z" fill="#8fbecd"/>
+        <path d="M492 274 C 540 264, 650 262, 704 272" fill="none" stroke="#c8e0e6" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+        <path d="M508 288 C 560 296, 640 297, 690 290" fill="none" stroke="#6ba4b6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+        <!-- bench lip / granite slabs at the outflow -->
+        <path d="M0 344 L140 318 L300 330 L470 300 L620 306 L780 296 L950 322 L1100 306 L1200 322 L1200 560 L0 560 Z" fill="#9aa1a8"/>
+        <g fill="none" stroke="#7e858d" stroke-width="1.4" stroke-linecap="round" opacity="0.55">
+          <path d="M340 328 L470 306"/>
+          <path d="M660 306 L780 300"/>
+          <path d="M950 326 L1060 312"/>
+        </g>
+
+        <!-- waterfall thread: outflow creek dropping off the lip -->
+        <path d="M598 306 C 596 330, 604 352, 596 376 C 588 400, 600 424, 592 448"
+              fill="none" stroke="#dcecef" stroke-width="7" stroke-linecap="round"/>
+        <path d="M598 306 C 596 330, 604 352, 596 376 C 588 400, 600 424, 592 448"
+              fill="none" stroke="#a5cdd8" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M606 330 C 610 342, 606 352, 610 364" fill="none" stroke="#dcecef" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+
+        <!-- mid slope with subalpine firs -->
+        <path d="M0 420 L180 388 L360 406 L540 380 L720 400 L900 378 L1080 402 L1200 386 L1200 560 L0 560 Z" fill="url(#cq-low)"/>
+        <!-- fir band -->
+        <g fill="#2e4436">
+          <path d="M120 402 l9 -26 l9 26 Z M124 388 l5 -16 l5 16 Z"/>
+          <path d="M175 396 l8 -22 l8 22 Z M178 384 l5 -14 l5 14 Z"/>
+          <path d="M262 408 l9 -26 l9 26 Z M266 394 l5 -16 l5 16 Z"/>
+          <path d="M330 402 l8 -24 l8 24 Z M333 390 l5 -15 l5 15 Z"/>
+          <path d="M430 396 l9 -26 l9 26 Z M434 382 l5 -16 l5 16 Z"/>
+          <path d="M505 388 l8 -22 l8 22 Z M508 376 l5 -14 l5 14 Z"/>
+          <path d="M680 404 l9 -26 l9 26 Z M684 390 l5 -16 l5 16 Z"/>
+          <path d="M760 396 l8 -22 l8 22 Z M763 384 l5 -14 l5 14 Z"/>
+          <path d="M850 388 l9 -24 l9 24 Z M854 376 l5 -15 l5 15 Z"/>
+          <path d="M955 398 l8 -22 l8 22 Z M958 386 l5 -14 l5 14 Z"/>
+          <path d="M1040 406 l9 -26 l9 26 Z M1044 392 l5 -16 l5 16 Z"/>
+          <path d="M1120 396 l8 -22 l8 22 Z M1123 384 l5 -14 l5 14 Z"/>
+        </g>
+        <g fill="#3c5544">
+          <path d="M215 410 l7 -18 l7 18 Z"/>
+          <path d="M390 404 l7 -18 l7 18 Z"/>
+          <path d="M590 398 l7 -18 l7 18 Z"/>
+          <path d="M810 400 l7 -18 l7 18 Z"/>
+          <path d="M1000 408 l7 -18 l7 18 Z"/>
+        </g>
+
+        <!-- Callaghan Lake below -->
+        <path d="M0 470 C 200 452, 420 448, 620 452 C 840 456, 1040 452, 1200 462 L1200 560 L0 560 Z" fill="#4d7f95"/>
+        <path d="M0 470 C 200 452, 420 448, 620 452 C 840 456, 1040 452, 1200 462" fill="none" stroke="#7fb0c0" stroke-width="2.2" opacity="0.9"/>
+        <!-- lake texture -->
+        <g fill="none" stroke="#6fa2b4" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
+          <path d="M110 494 q16 -5 32 0 t32 0"/>
+          <path d="M420 510 q16 -5 32 0 t32 0"/>
+          <path d="M760 500 q16 -5 32 0 t32 0"/>
+          <path d="M1010 520 q16 -5 32 0 t32 0"/>
+          <path d="M240 534 q16 -5 32 0 t32 0"/>
+          <path d="M620 540 q16 -5 32 0 t32 0"/>
+        </g>
+        <!-- waterfall entering the big lake -->
+        <path d="M586 452 q6 8 0 14" fill="none" stroke="#c9e2e8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+
+        <!-- tiny canoe, two paddlers, crossing toward the far shore -->
+        <g transform="translate(330 498)">
+          <path d="M0 8 C 8 13, 40 13, 48 8 C 40 10.5, 8 10.5, 0 8 Z" fill="#27313a"/>
+          <path d="M14 6 L14 0 M13 0 L18 3" fill="none" stroke="#27313a" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="15" cy="3.4" r="2.4" fill="#27313a"/>
+          <path d="M33 6 L33 0.5 M34 0.5 L29 3.5" fill="none" stroke="#27313a" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="32" cy="3.8" r="2.4" fill="#27313a"/>
+          <path d="M-14 12 q10 -3 20 0 M42 12 q10 -3 20 0" fill="none" stroke="#7fb0c0" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+        </g>
+
+        <!-- a raven over the bowl -->
+        <path d="M760 120 q6 -6 12 0 q6 -6 12 0" fill="none" stroke="#4a525b" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <figcaption>The whole trip in one frame: the crossing, the thread of the outflow, and the bowl that holds the lake.</figcaption>
+  </figure>
+
+  <!-- survey ribbon -->
+  <div class="survey">
+    <div class="cells">
+      <div class="cell"><span class="k">Position</span><span class="v">~50.17&deg;&thinsp;N &middot; 123.19&deg;&thinsp;W</span></div>
+      <div class="cell"><span class="k">The Paddle</span><span class="v">~2 km <span>each way</span></span></div>
+      <div class="cell"><span class="k">The Climb</span><span class="v">~1.5&ndash;2 km <span>steep</span></span></div>
+      <div class="cell"><span class="k">Gain</span><span class="v">~250&ndash;350 m</span></div>
+      <div class="cell"><span class="k">Season</span><span class="v">~Jul &ndash; Oct</span></div>
+      <div class="cell"><span class="k">Boat</span><span class="v">Mandatory</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== OPENING ESSAY ===================== -->
+<section class="opening" id="opening">
+  <div class="prose">
+    <span class="eyebrow">The Premise</span>
+    <div class="lede">
+      <p class="dropcap">There is no trail around Callaghan Lake. That single fact is the doorman for everything that follows. Cirque Lake hangs in a granite bowl above the far southwest shore, and the only way to reach the climb is to cross the water first &mdash; roughly two kilometres of open lake between the launch and the inlet where the route begins. No boat, no trip. In a corridor where most alpine water now comes with a parking problem, that filter is the whole gift.</p>
+      <p>The Callaghan is the quiet arm of the valley system &mdash; up the Callaghan Valley road off Highway 99 between Squamish and Whistler, past the Nordic venue turnoffs, until pavement gives up and a rough gravel road carries you the last stretch to Callaghan Lake Provincial Park. Something with clearance, ideally all-wheel drive, earns its keep here. For paddlers who like their water sports with a vertical component, what waits at the end of that road is arguably the best value in the corridor: a flat-water crossing, a fierce little climb, and a lake most visitors to the valley never learn exists.</p>
+      <p>We&rsquo;ve structured this guide the way the day actually unfolds &mdash; as an expedition in two acts. The paddle is Act I. The climb is Act II. The reward gets its own billing.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    <p>&ldquo;Cirque Lake doesn&rsquo;t have a trailhead. It has a shoreline you have to earn twice &mdash; once with your arms, once with your legs.&rdquo;</p>
+    <cite>Field notes, Callaghan Valley</cite>
+  </div>
+</section>
+
+<!-- ===================== ACT I — THE PADDLE ===================== -->
+<section class="act" id="act-one">
+  <div class="act-grid">
+    <div class="act-side">
+      <div class="numeral">I</div>
+      <div class="actname">Act One &middot; The Paddle</div>
+      <div class="actstats">
+        <div><span>Distance</span><b>~2 km</b></div>
+        <div><span>Water</span><b>Cold, alpine</b></div>
+        <div><span>Wind</span><b>Afternoon, funnelled</b></div>
+        <div><span>PFDs</span><b>Non&#8209;negotiable</b></div>
+        <div><span>Per canoe</span><b>Up to 3</b></div>
+      </div>
+    </div>
+    <div class="act-main">
+      <h2>Two kilometres of water <em>stand between you and the climb.</em></h2>
+      <p>From the launch at Callaghan Lake, aim across to the far southwest shore &mdash; the inlet area where the outflow creek from Cirque Lake comes down. On a still morning it&rsquo;s a gorgeous, easy paddle: granite walls on both sides, subalpine fir down to the waterline, the bowl you&rsquo;re headed for visible high on the skyline if you know where to look.</p>
+      <p>The catch is the wind. Callaghan Lake sits in a funnel, and on warm days the afternoon wind pours down the valley and can turn the return crossing into genuinely hard work &mdash; whitecaps-and-grim-faces hard, in a loaded canoe with tired arms. The move is the oldest one in the book: launch early, cross in the morning calm, and hug the shoreline rather than committing to the middle of the lake. Wear the PFDs the whole way; this is cold alpine water a long way from help.</p>
+
+      <div class="aside-note">
+        <span class="tag">The boat problem, solved</span>
+        <p>No boat? This trip is the reason canoe delivery exists. <a class="tx" href="https://squamishcanoerental.com/">Squamish Canoe Rental</a> rents proper three-seat tripping canoes with paddles and PFDs included, and you can <a class="tx" href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">book online through Rented Local</a> &mdash; ask about delivery options for the Callaghan when you book, and mention the rough final road so the logistics get sorted in advance. Three paddlers per canoe is the sensible maximum, and for this trip two is even better: lighter boat, easier carry up the beach, faster crossing.</p>
+      </div>
+
+      <p>At the far shore, land near the inlet, haul the canoe well up out of the water, and flip it. You&rsquo;ll be gone for hours, and lake levels and weather both change. Take a good look back at the launch side before you walk away &mdash; you want to recognize your line home when the light is different.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACT II — THE CLIMB ===================== -->
+<section class="act alt" id="act-two">
+  <div class="act-grid">
+    <div class="act-side">
+      <div class="numeral">II</div>
+      <div class="actname">Act Two &middot; The Climb</div>
+      <div class="actstats">
+        <div><span>Distance</span><b>~1.5&ndash;2 km</b></div>
+        <div><span>Gain</span><b>~250&ndash;350 m</b></div>
+        <div><span>Character</span><b>Steep, rooty</b></div>
+        <div><span>Status</span><b>Unofficial</b></div>
+        <div><span>Footwear</span><b>Sturdy, grippy</b></div>
+      </div>
+    </div>
+    <div class="act-main">
+      <h2>Short, steep, and honest &mdash; <em>the creek is your handrail.</em></h2>
+      <p>From the landing, the route climbs beside the outflow creek that drains Cirque Lake &mdash; the same white thread you can see from the water. Call it a kilometre and a half to two kilometres, gaining somewhere in the neighbourhood of 250 to 350 metres. On paper that sounds like a warm-up. Underfoot it&rsquo;s a proper little fight: steep, rooty, rough in places, with sections where hands come out of pockets and stay out.</p>
+      <p>Be clear-eyed about what this path is. It&rsquo;s an unofficial, unmaintained route worn in by the people who&rsquo;ve gone before you, not a built and signed trail &mdash; expect it to be faint in places, expect deadfall, and expect conditions to vary year to year. Sturdy shoes with real tread are the difference between a fun scramble and a miserable one, especially on the way down when the roots are damp. If the route ever feels wrong, the creek is your handrail: the way up stays close to the water.</p>
+
+      <div class="aside-note bear">
+        <span class="tag">Company in the valley</span>
+        <p>This is bear country, full stop. Guides who work this valley report both bear and bobcat sightings around Callaghan Lake, and the climb follows exactly the kind of noisy creek corridor where you and a bear can surprise each other. Make noise, carry bear spray where you can reach it, keep food packed away, and give any wildlife the whole right-of-way.</p>
+      </div>
+
+      <p>The climb ends the way all the best ones do: abruptly. The angle relents, the trees thin, granite opens up in front of you &mdash; and the bowl is suddenly there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE REWARD ===================== -->
+<section class="reward" id="reward">
+  <div class="reward-head">
+    <span class="eyebrow" style="justify-content:center;">The Reward</span>
+    <h2>A granite amphitheatre with a lake for a stage.</h2>
+  </div>
+  <div class="reward-grid">
+    <div class="reward-cell">
+      <span class="n">i.</span>
+      <h3>Slabs that slide into the water</h3>
+      <p>The shoreline here isn&rsquo;t beach &mdash; it&rsquo;s clean granite slab dipping straight into clear alpine water. Warm rock, cold lake, nowhere to be. This is the lunch spot the whole day was for.</p>
+    </div>
+    <div class="reward-cell">
+      <span class="n">ii.</span>
+      <h3>The amphitheatre walls</h3>
+      <p>Big cirque walls wrap the far side of the bowl and hold the acoustics of the place &mdash; talk quietly and the lake talks back. Late-lying snow patches feed the water well into summer.</p>
+    </div>
+    <div class="reward-cell">
+      <span class="n">iii.</span>
+      <h3>Ledges people scout first</h3>
+      <p>There are cliff-jumping ledges here, and people do use them &mdash; after swimming the landing zone first, checking depth and underwater rock, every single time. Alpine lakes hide boulders in dark water. Scout carefully or spectate happily; both are good days.</p>
+    </div>
+    <div class="reward-cell">
+      <span class="n">iv.</span>
+      <h3>A fraction of the crowds</h3>
+      <p>The double filter &mdash; rough road, then mandatory paddle &mdash; means Cirque usually sees a fraction of the people the drive-up lakes get. On a weekday you have decent odds of an empty bowl.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <div class="kitline">
+      <span class="tag">Leave it as found</span>
+      <p>There are no facilities anywhere past the Callaghan Lake launch &mdash; no outhouses, no bins, no water taps, nothing. Everything you carry in comes back out, including the stuff that feels biodegradable. The alpine shoreline here is fragile and slow-growing; stay on rock where you can, keep soap out of the lake, and leave the bowl exactly as quiet as you found it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ALMANAC / WHEN TO GO ===================== -->
+<section class="almanac" id="almanac">
+  <div class="prose">
+    <span class="eyebrow">The Almanac</span>
+    <h2 style="margin-top:1.1rem;">A late-melting road sets the calendar.</h2>
+    <p style="margin-top:1.3rem;">The gravel road to Callaghan Lake sits high and holds snow late &mdash; most years the realistic window is July through October, but it varies. Check current road and conditions reports (and BC Parks notices for Callaghan Lake Provincial Park) before you commit to the drive.</p>
+
+    <table class="season">
+      <thead>
+        <tr><th>Months</th><th>What to expect</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="m">Nov &ndash; Jun</td>
+          <td>Road snowbound or melting out; lake cold and high; route sloppy. The valley belongs to winter travellers with different skills and different gear.</td>
+          <td class="verdict no">Wait</td>
+        </tr>
+        <tr>
+          <td class="m">July</td>
+          <td>The window usually creaks open. Snow patches linger in the bowl, the waterfall runs loud, mosquitoes collect their toll. Confirm the road has melted out before driving up.</td>
+          <td class="verdict go">Go, with checks</td>
+        </tr>
+        <tr>
+          <td class="m">Aug &ndash; early Sep</td>
+          <td>Prime. Warmest water the bowl will offer, long days, settled weather more often than not. Launch early anyway &mdash; the afternoon wind doesn&rsquo;t take summer off.</td>
+          <td class="verdict go">Go</td>
+        </tr>
+        <tr>
+          <td class="m">Mid Sep &ndash; Oct</td>
+          <td>Quiet and golden. Cold swims, empty bowl, short days &mdash; budget daylight honestly for two crossings and a climb. First real snowfall closes the show.</td>
+          <td class="verdict go">Go, watch daylight</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== HONEST NOTE ===================== -->
+<section class="honest" id="honest">
+  <div class="prose">
+    <span class="eyebrow">Honest Note</span>
+    <h2 style="margin-top:1.1rem;">What the brochures leave out.</h2>
+    <p style="margin-top:1.3rem;">This is a remote trip dressed up as a short one. The numbers look modest &mdash; a couple of kilometres of paddling, a short climb &mdash; but you&rsquo;re combining open alpine water, an unmaintained route, and a valley with no services, no cell reliability worth betting on, and help a long way off. <em>The wind is the part people underestimate.</em> A crossing that took forty easy minutes in the morning can be a genuine struggle at four in the afternoon. Build your day around the return paddle, not the departure.</p>
+    <p>The road will also be worse than you&rsquo;re picturing &mdash; rough gravel that&rsquo;s hard on low cars. And the climb, though short, is steeper and rootier than its distance suggests; this is not the day for running shoes with dead tread or for paddlers who&rsquo;d rather not use their hands.</p>
+    <p>None of this is a reason to skip it. It&rsquo;s the reason the bowl is still quiet. Tell someone your plan, wear the PFDs, launch early, and Cirque gives you one of the finest days in the corridor.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="qa" id="qa">
+  <div class="prose">
+    <span class="eyebrow">Questions &amp; Answers</span>
+    <h2 style="margin-top:1.1rem;">What people ask before they go.</h2>
+
+    <div class="qa-list">
+
+      <details class="q">
+        <summary>Can you hike to Cirque Lake without a canoe?</summary>
+        <div class="ans">
+          <p>No &mdash; and this is the defining fact of the trip. There&rsquo;s no trail around Callaghan Lake, so the only practical way to reach the climb is to paddle roughly 2&nbsp;km across to the far southwest shore. The paddle is mandatory. If you don&rsquo;t own a boat, <a class="tx" href="https://squamishcanoerental.com/">Squamish Canoe Rental</a> rents canoes with paddles and PFDs included &mdash; <a class="tx" href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">book through Rented Local</a> and sort delivery logistics when you reserve.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>How hard is the climb from Callaghan Lake to Cirque Lake?</summary>
+        <div class="ans">
+          <p>Short but legitimately steep. Figure roughly 1.5&ndash;2&nbsp;km following the outflow creek, gaining on the order of 250&ndash;350&nbsp;m, on an unofficial, unmaintained route that&rsquo;s rooty and rough in places. Most reasonably fit hikers manage it fine with sturdy shoes and unhurried pacing &mdash; just don&rsquo;t expect a built trail, and expect to use your hands here and there.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>What&rsquo;s the road in like?</summary>
+        <div class="ans">
+          <p>The Callaghan Valley road leaves Highway 99 between Squamish and Whistler; the final stretch to Callaghan Lake Provincial Park is rough gravel. All-wheel drive and decent clearance are recommended &mdash; low sedans have a bad time. The road also melts out late; check current conditions before driving up, especially early in the season.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>When is the best time to go?</summary>
+        <div class="ans">
+          <p>Realistically July through October, with August to early September the sweet spot &mdash; warmest water, longest days, most settled weather. Whatever the month, launch early: afternoon winds funnel down the valley and can make the return crossing real work.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>Is the cliff jumping safe?</summary>
+        <div class="ans">
+          <p>Only as safe as your scouting. There are ledges people jump from, but alpine lakes hide boulders in dark, cold water, and levels change through the season. The people who do this well swim the landing zone first and check depth every visit &mdash; never trust last year&rsquo;s memory or someone else&rsquo;s word. If you can&rsquo;t verify the depth, don&rsquo;t jump. Rescue here is hours away at best.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>Are there bears in the Callaghan?</summary>
+        <div class="ans">
+          <p>Yes &mdash; this valley is active bear country, and guides who work it report both bear and bobcat sightings around Callaghan Lake. Travel in a group, make noise on the climb (the creek masks your sound), carry bear spray somewhere reachable, and keep food sealed and packed. Wildlife encounters here overwhelmingly end fine when people give animals space and no reason to linger.</p>
+        </div>
+      </details>
+
+      <details class="q">
+        <summary>Are there facilities? Can I camp?</summary>
+        <div class="ans">
+          <p>Past the Callaghan Lake launch there are no facilities at all &mdash; no outhouses, bins, or water. Pack out absolutely everything, and treat the fragile alpine shoreline gently. For camping at Callaghan Lake itself or anywhere in the park, check BC Parks&rsquo; current information for Callaghan Lake Provincial Park before you go &mdash; rules and site status change, and we&rsquo;d rather point you at the source than guess.</p>
+          <p>If you want the full picture of the base lake &mdash; the launch, the road, the bigger paddle &mdash; our sibling guide to <a class="tx" href="https://callaghanlake.com/">Callaghan Lake</a> covers it properly.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="colophon">
+  <div class="wrap">
+    <div class="col-grid">
+      <div>
+        <h4>This Guide</h4>
+        <p>Cirque Lake is entry No.&nbsp;10 in Volume&nbsp;II of the Sea to Sky Trails &mdash; a slow-built set of field guides to the lakes, climbs, and quiet corners of the Coast Mountains. Start with the base lake: our guide to <a class="tx" href="https://callaghanlake.com/">Callaghan Lake</a> covers the launch this whole trip begins from.</p>
+      </div>
+      <div>
+        <h4>More Field Guides</h4>
+        <ul>
+          <li><a href="https://callaghanlake.com/">Callaghan Lake</a></li>
+          <li><a href="https://waterspritelake.com/">Watersprite Lake</a></li>
+          <li><a href="https://cheakamuslake.com/">Cheakamus Lake</a></li>
+          <li><a href="https://riverofgoldendreams.ca/">River of Golden Dreams</a></li>
+          <li><a href="https://joffrelake.com/">Joffre Lakes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get on the Water</h4>
+        <ul>
+          <li><a href="https://squamishcanoerental.com/">Squamish Canoe Rental</a></li>
+          <li><a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Book a canoe online</a></li>
+          <li><a href="https://seatoskytrails.com/">Part of the Sea to Sky Trails</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-bottom">
+      <div><em>Sea to Sky Trails</em> &middot; Vol.&nbsp;II, No.&nbsp;10 &middot; Published in the shared territory of the Sḵwx̱wú7mesh (Squamish) and L̓il̓wat7úl (Líl̓wat) Nations.</div>
+      <div>Set in Fraunces &amp; Inter. Reader-funded.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== STRUCTURED DATA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "Cirque Lake",
+  "url": "https://cirquelake.com/",
+  "description": "A hanging alpine lake in a granite bowl above Callaghan Lake in the Callaghan Valley, BC. Reached by a mandatory ~2 km canoe crossing of Callaghan Lake followed by a steep, unofficial ~1.5–2 km climb beside the outflow creek.",
+  "touristType": ["Paddlers", "Hikers", "Backcountry travellers"],
+  "isAccessibleForFree": true,
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "British Columbia",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.17,
+    "longitude": -123.19
+  },
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Callaghan Lake Provincial Park"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you hike to Cirque Lake without a canoe?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — there is no trail around Callaghan Lake, so the only practical way to reach the climb is to paddle roughly 2 km across to the far southwest shore. The paddle is mandatory. If you don't own a boat, Squamish Canoe Rental rents canoes with paddles and PFDs included, bookable online through Rented Local." }
+    },
+    {
+      "@type": "Question",
+      "name": "How hard is the climb from Callaghan Lake to Cirque Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Short but legitimately steep. Roughly 1.5–2 km following the outflow creek, gaining on the order of 250–350 m, on an unofficial, unmaintained route that is rooty and rough in places. Sturdy shoes and unhurried pacing get most reasonably fit hikers up fine, but expect to use your hands here and there." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the road to Callaghan Lake like?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The Callaghan Valley road leaves Highway 99 between Squamish and Whistler; the final stretch to Callaghan Lake Provincial Park is rough gravel. All-wheel drive and decent clearance are recommended. The road melts out late — check current conditions before driving up, especially early in the season." }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best time to visit Cirque Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Realistically July through October, with August to early September the sweet spot for warm water, long days, and settled weather. Whatever the month, launch early — afternoon winds funnel down the Callaghan Valley and can make the return crossing hard work." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the cliff jumping at Cirque Lake safe?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only as safe as your scouting. There are ledges people jump from, but alpine lakes hide boulders in dark, cold water and levels change through the season. Swim the landing zone and check depth on every visit; if you can't verify the depth, don't jump. Rescue is hours away at best." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there bears in the Callaghan Valley?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is active bear country, and guides who work the valley report both bear and bobcat sightings around Callaghan Lake. Travel in a group, make noise on the climb, carry bear spray somewhere reachable, and keep food sealed and packed away." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there facilities at Cirque Lake? Can I camp?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Past the Callaghan Lake launch there are no facilities at all — no outhouses, bins, or water. Pack out everything and treat the fragile alpine shoreline gently. For camping rules and site status at Callaghan Lake Provincial Park, check BC Parks' current information before you go." }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

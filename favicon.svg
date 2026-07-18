@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Cirque Lake mark: hanging bowl, waterfall thread, lake below -->
+  <rect width="64" height="64" rx="12" fill="#f2f1ec"/>
+  <!-- cirque walls -->
+  <path d="M8 34 L18 16 L26 26 L32 12 L40 24 L48 15 L56 32" fill="none" stroke="#5a616b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- hanging lake in the bowl -->
+  <path d="M24 32 C 28 30, 38 30, 42 32 C 38 35, 28 35, 24 32 Z" fill="#4d8ba3"/>
+  <!-- waterfall thread -->
+  <path d="M33 34 C 32 39, 34 42, 33 47" fill="none" stroke="#4d8ba3" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- lake below -->
+  <path d="M12 52 q5 -3 10 0 t10 0 t10 0 t10 0" fill="none" stroke="#33657c" stroke-width="3" stroke-linecap="round"/>
+</svg>
