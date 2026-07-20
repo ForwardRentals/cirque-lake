@@ -18,19 +18,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #f2f1ec;         /* cool paper — granite dust */
-    --paper-raise: #f7f6f2;
-    --paper-sink: #e9e8e1;
-    --ink: #21242a;           /* wet-granite ink */
-    --ink-soft: #3b3f46;
-    --ink-mute: #757a80;
-    --rule: #d8d7cf;
-    --rule-strong: #bfbeb4;
-    --granite: #5a616b;
-    --ice: #4d8ba3;           /* ice-blue accent */
-    --ice-deep: #33657c;
-    --fir: #2e4436;           /* subalpine fir */
-    --snowline: #e3ecef;
+    --bg: #fbfaf7;            /* Sea to Sky Trails brand */
+    --surface: #ffffff;
+    --sage: #eef1ea;
+    --line: #e3e1d8;
+    --ink: #22261f;
+    --ink-soft: #4c5245;
+    --mute: #8b9083;
+    --pine: #3d5a3f;
+    --pine-deep: #2c4230;
+    --sun: #c98f2d;
+    /* legacy aliases */
+    --paper: var(--bg);
+    --paper-raise: var(--surface);
+    --paper-sink: var(--sage);
+    --ink-mute: var(--mute);
+    --rule: var(--line);
+    --rule-strong: var(--line);
+    --granite: var(--pine);
+    --ice: var(--sun);
+    --ice-deep: var(--pine);
+    --fir: var(--pine);
+    --snowline: var(--sage);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -42,7 +51,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  ::selection { background: var(--ice-deep); color: var(--paper); }
+  ::selection { background: var(--pine); color: #fff; }
 
   a { color: inherit; text-decoration: none; }
   .tx { border-bottom: 1px solid var(--rule-strong); transition: border-color .18s, color .18s; }
@@ -50,7 +59,7 @@
 
   h1, h2, h3 {
     font-family: "Fraunces", "Times New Roman", serif;
-    font-weight: 380;
+    font-weight: 500;
     line-height: 1.06;
     letter-spacing: -0.02em;
     margin: 0;
@@ -59,33 +68,36 @@
   }
   h1 { font-size: clamp(2.7rem, 6.5vw, 5rem); }
   h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-  h3 { font-size: 1.22rem; font-weight: 450; line-height: 1.3; }
+  h3 { font-size: 1.22rem; font-weight: 600; line-height: 1.3; }
   p { margin: 0 0 1.05rem; color: var(--ink-soft); font-size: 1.03rem; }
 
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
   .prose { max-width: 700px; margin: 0 auto; padding: 0 1.5rem; }
 
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 0.8rem;
-    font-size: 0.7rem; letter-spacing: 0.26em; text-transform: uppercase;
-    font-weight: 600; color: var(--fir);
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; color: var(--pine);
   }
-  .eyebrow::after { content: ""; width: 3.2rem; height: 1px; background: var(--rule-strong); }
+  .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--sun); border-radius: 2px; }
 
   /* ---------- NAV ---------- */
   header.masthead {
     position: sticky; top: 0; z-index: 60;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    background: rgba(251,250,247,0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--rule);
   }
   header.masthead .bar {
     max-width: 1120px; margin: 0 auto;
-    display: flex; align-items: baseline; justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     padding: 0.85rem 1.5rem;
   }
-  .wordmark { font-family: "Fraunces", serif; font-size: 1.02rem; font-weight: 450; letter-spacing: -0.01em; }
+  .wordmark { display: flex; align-items: center; gap: 0.75rem; font-family: "Fraunces", serif; font-size: 1.02rem; font-weight: 600; letter-spacing: -0.01em; }
+  .wordmark .peak { width: 38px; height: 38px; background: var(--pine); border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
+  .wordmark .peak svg { width: 22px; height: 22px; display: block; }
+  .wordmark .peak path { stroke: #fff; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
   .wordmark small {
     display: block; font-family: "Inter", sans-serif;
     font-size: 0.58rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase;
@@ -114,7 +126,7 @@
     letter-spacing: -0.005em;
   }
   .hero-art { margin: 3rem auto 0; max-width: 1120px; padding: 0 1.5rem; }
-  .hero-art svg { display: block; width: 100%; height: auto; border-radius: 8px; }
+  .hero-art svg { display: block; width: 100%; height: auto; border-radius: 12px; }
   .hero-art figcaption {
     font-size: 0.76rem; color: var(--ink-mute); margin-top: 0.7rem;
     font-style: italic; font-family: "Fraunces", serif; font-weight: 340; font-size: 0.9rem;
@@ -192,17 +204,17 @@
 
   .aside-note {
     margin: 1.8rem 0; padding: 1.2rem 1.4rem;
-    background: var(--snowline);
-    border-left: 2px solid var(--ice-deep);
-    border-radius: 0 4px 4px 0;
+    background: var(--sage);
+    border-left: 2px solid var(--pine);
+    border-radius: 0 12px 12px 0;
   }
   .aside-note .tag {
     display: block; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
     font-weight: 600; color: var(--ice-deep); margin-bottom: 0.4rem;
   }
   .aside-note p { margin: 0; font-size: 0.95rem; color: var(--ink); }
-  .aside-note.bear { background: #efe9dd; border-left-color: var(--fir); }
-  .aside-note.bear .tag { color: var(--fir); }
+  .aside-note.bear { background: var(--sage); border-left-color: var(--sun); }
+  .aside-note.bear .tag { color: var(--pine); }
 
   /* ---------- REWARD ---------- */
   section.reward { padding: 6rem 0; border-top: 1px solid var(--rule); }
@@ -211,10 +223,12 @@
   .reward-grid {
     max-width: 1120px; margin: 0 auto; padding: 0 1.5rem;
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-    background: var(--rule); border: 1px solid var(--rule);
+    background: var(--line); border: 1px solid var(--line);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(34,38,31,0.06);
   }
   @media (max-width: 720px) { .reward-grid { grid-template-columns: 1fr; } }
-  .reward-cell { background: var(--paper); padding: 1.9rem 1.8rem; }
+  .reward-cell { background: var(--surface); padding: 1.9rem 1.8rem; }
   .reward-cell .n { font-family: "Fraunces", serif; font-style: italic; font-weight: 340; color: var(--ice-deep); font-size: 0.95rem; display: block; margin-bottom: 0.55rem; }
   .reward-cell h3 { margin-bottom: 0.5rem; }
   .reward-cell p { margin: 0; font-size: 0.95rem; }
@@ -222,8 +236,9 @@
   /* ---------- OUTFIT / FUNNEL ---------- */
   .kitline {
     margin: 2rem 0 0; padding: 1.5rem 1.6rem;
-    border: 1px solid var(--rule-strong); border-radius: 6px;
-    background: var(--paper-raise);
+    border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface);
+    box-shadow: 0 1px 3px rgba(34,38,31,0.06);
   }
   .kitline .tag { display: block; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); margin-bottom: 0.5rem; }
   .kitline p { margin: 0; font-size: 0.97rem; }
@@ -301,8 +316,11 @@
 <!-- ===================== MASTHEAD ===================== -->
 <header class="masthead">
   <div class="bar">
-    <a class="wordmark" href="https://seatoskytrails.com/">Sea to Sky Trails
-      <small>Field guides to the corridor</small>
+    <a class="wordmark" href="https://seatoskytrails.com/">
+      <span class="peak"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18 L9 8 L12 12 L16 5 L21 18"/></svg></span>
+      <span>Sea to Sky Trails
+        <small>Field guides to the corridor</small>
+      </span>
     </a>
     <nav>
       <a href="#act-one">Act I &middot; The Paddle</a>
@@ -459,7 +477,7 @@
 <section class="photo-feature" style="padding:2.5rem 0 0;">
   <div class="wrap">
     <figure style="margin:0;">
-      <div role="img" aria-label="Mist drifting through forested slopes in the Callaghan Valley, the valley that holds Cirque Lake" style="background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Misty_day_in_the_Callaghan_Valley_%2824859909477%29.jpg/1280px-Misty_day_in_the_Callaghan_Valley_%2824859909477%29.jpg') center/cover no-repeat; aspect-ratio:16/9; border-radius:6px; border:1px solid var(--rule);"></div>
+      <div role="img" aria-label="Mist drifting through forested slopes in the Callaghan Valley, the valley that holds Cirque Lake" style="background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Misty_day_in_the_Callaghan_Valley_%2824859909477%29.jpg/1280px-Misty_day_in_the_Callaghan_Valley_%2824859909477%29.jpg') center/cover no-repeat; aspect-ratio:16/9; border-radius:12px; border:1px solid var(--line);"></div>
       <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:0.85rem; color:var(--ink-mute); margin-top:0.6rem;">A misty day in the Callaghan Valley, near Cirque Lake. Photo &mdash; Ruth Hartnup (CC BY 2.0), via Wikimedia Commons.</figcaption>
     </figure>
   </div>
